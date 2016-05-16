@@ -75,7 +75,7 @@
     "sqlImageOffer": "SQL2014-WS2012R2",
     "sqlImageSku": "Standard",
     "vmExtensionName": "dscExtension",
-    "modulesUrl": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/iis-2vm-sql-1vm/scripts/WebServerConfig.ps1.zip",
+    "modulesUrl": "https://raw.githubusercontent.com/chmitch/cgmarmtest/master/WebServerConfig.ps1.zip",
     "configurationFunction": "WebServerConfig.ps1\\WebServerConfig"
   },
   "resources": [

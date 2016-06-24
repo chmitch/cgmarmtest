@@ -285,7 +285,7 @@
       "location": "[resourceGroup().location]",
       "apiVersion": "[variables('apiversion')]",
       "dependsOn": [
-        "[concat(variables('sqlSrvDBName'),'/', variables('vmExtensionName'))]"
+        "[concat('Microsoft.Compute/virtualMachines/', variables('sqlSrvDBName'))]"
       ],
       "properties": {
         "publisher": "Microsoft.Compute",

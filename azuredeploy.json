@@ -294,11 +294,11 @@
         "typeHandlerVersion": "1.8",
         "autoUpgradeMinorVersion": true,
         "settings": {
-          "fileUris": [ "https://raw.githubusercontent.com/chmitch/cgmarmtest/master/AcumaticaConfig.ps1" ]
+          "fileUris": [ "https://raw.githubusercontent.com/chmitch/cgmarmtest/master/AcumaticaInstaller.ps1" ]
 
         },
         "protectedSettings": {
-          "commandToExecute": "[Concat('powershell.exe -ExecutionPolicy Unrestricted -File', ' ', 'AcumaticaConfig.ps1')]"
+          "commandToExecute": "[Concat('powershell.exe -ExecutionPolicy Unrestricted -File', ' ', 'AcumaticaInstaller.ps1')]"
         }
 
       }

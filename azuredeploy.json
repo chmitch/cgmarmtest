@@ -253,8 +253,8 @@
       }
     },
     {
-      "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(variables('sqlSrvDBName'),'/', variables('vmExtensionName'))]",
+      "type": "Microsoft.Compute/virtualMachines/extensions",
       "apiVersion": "[variables('apiVersion')]",
       "location": "[resourceGroup().location]",
       "dependsOn": [
@@ -277,6 +277,29 @@
           }
         },
         "protectedSettings": { }
+      }
+    },
+    {
+      "name": "[concat(variables('sqlSrvDBName'),'/AcumaticaConfiguration')]",
+      "type": "Microsoft.Compute/virtualMachines/extensions",
+      "location": "[resourceGroup().location]",
+      "apiVersion": "[variables('apiversion')]",
+      "dependsOn": [
+        "[concat(variables('sqlSrvDBName'),'/', variables('vmExtensionName'))]"
+      ],
+      "properties": {
+        "publisher": "Microsoft.Compute",
+        "type": "CustomScriptExtension",
+        "typeHandlerVersion": "1.8",
+        "autoUpgradeMinorVersion": true,
+        "settings": {
+          "fileUris": [ "https://raw.githubusercontent.com/chmitch/cgmarmtest/master/AcumaticaConfig.ps1" ]
+
+        },
+        "protectedSettings": {
+          "commandToExecute": "[Concat('powershell.exe -ExecutionPolicy Unrestricted -File', ' ', 'AcumaticaConfig.ps1')]"
+        }
+
       }
     }
   ]

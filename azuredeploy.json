@@ -62,7 +62,7 @@
     "addressPrefix": "10.0.0.0/16",
     "feSubnetPrefix": "10.0.0.0/24",
     "feNSGName": "feNsg",
-    "sqlSrvDBName": "[concat(parameters('envPrefixName'), 'sqlSrv14')]",
+    "sqlSrvDBName": "[concat(parameters('envPrefixName'), 'sqlSrv16')]",
     "sqlVmSize": "[parameters('sqlVMSize')]",
     "sqlSrvDBOsDiskName": "[concat(parameters('envPrefixName'), 'DBSrvOS')]",
     "sqlSrvDBDataDiskName": "[concat(parameters('envPrefixName'), 'DBSrvData')]",

@@ -72,8 +72,8 @@
     "sqlPublicIP": "[concat(parameters('envPrefixName'), 'SqlPip')]",
     "sqlPublicIPRef": "[resourceId('Microsoft.Network/publicIPAddresses', variables('sqlPublicIP'))]",
     "sqlImagePublisher": "MicrosoftSQLServer",
-    "sqlImageOffer": "SQL2014-WS2012R2",
-    "sqlImageSku": "Standard",
+    "sqlImageOffer": "SQL2016-WS2012R2",
+    "sqlImageSku": "SQLDEV",
     "vmExtensionName": "dscExtension",
     "modulesUrl": "https://raw.githubusercontent.com/chmitch/cgmarmtest/master/WebServerConfig.ps1.zip",
     "configurationFunction": "WebServerConfig.ps1\\WebServerConfig"

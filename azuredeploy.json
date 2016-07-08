@@ -205,7 +205,7 @@
       }
     },
     {
-      "name": "[concat(parameters('envPrefixName'), 'sqlSrv14')]",
+      "name": "[concat(parameters('envPrefixName'), 'sqlSrv16')]",
       "type": "Microsoft.Compute/virtualMachines",
       "location": "[resourceGroup().location]",
       "apiVersion": "[variables('apiVersion')]",
@@ -285,7 +285,7 @@
       "location": "[resourceGroup().location]",
       "apiVersion": "[variables('apiversion')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Compute/virtualMachines', variables('sqlSrvDBName'))]",
+        "[resourceId('Microsoft.Compute/virtualMachines/', variables('sqlSrvDBName'))]",
         "[concat('Microsoft.Compute/virtualMachines/', variables('sqlSrvDBName'),'/extensions/',variables('vmExtensionName'))]"
       ],
       "properties": {
@@ -305,3 +305,4 @@
     }
   ]
 }
+
